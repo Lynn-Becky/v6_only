@@ -7,7 +7,7 @@
 # 部署
 
 ```
-apt install -y curl && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/v6_only/main/test.sh)
+apt install -y curl && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/v6_only/main/v4.sh)
 ```
 目前在wap 1刀机上的debian11系统试验  
 
