@@ -28,8 +28,12 @@ case $choice in
     warp-cli set-proxy-port 1835
     warp-cli connect
     warp-cli enable-always-on
-    sed -i 's/socks4 127.0.0.1 9050/socks5 127.0.0.1 1835/' /etc/proxychains4.conf
-
-
+    echo -e "\e[1;32m请到文件最后，将\"socks4 127.0.0.1 9050\"修改为\"socks5 127.0.0.1 1835\"\e[0m"
+    read -p "按Enter键开始修改..."
+    apt install -y vim
+    vim /etc/proxychains4.conf
+    ;;
+  *)
+    echo "无效的选项，请重新运行脚本并选择有效的选项。"
     ;;
 esac
