@@ -28,6 +28,8 @@ case $choice in
     warp-cli set-proxy-port 1835
     warp-cli connect
     warp-cli enable-always-on
+    sed -i 's/socks4 127.0.0.1 9050/socks5 127.0.0.1 1835/' /etc/proxychains4.conf
+
 
     ;;
 esac
