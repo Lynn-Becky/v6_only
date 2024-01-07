@@ -18,7 +18,7 @@ case $choice in
     echo "原文件已经备份，恢复请使用选项3'"
     ;;
   2)
-    echo "你选择了Warp服务，默认socs端口为1835"
+    echo "你选择了Warp服务，默认socks端口为1835"
     apt update && apt install -y curl gnupg lsb-release proxychains4
     curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg |  gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
     echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/cloudflare-client.list
