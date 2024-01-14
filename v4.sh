@@ -5,9 +5,9 @@ YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 NC='\033[0m' 
 
-echo -e "${GREEN}一键在仅ipv6系统上添加ipv4出口脚本 @lynn-becky${NC}"
+echo -e "${GREEN}一键在仅ipv6系统上添加ipv4出口脚本 github@lynn-becky${NC}"
 echo "NAT64是全局的，在执行github脚本时（如安装探针）可不添加proxychains选项，但速度可能较慢"
-echo "Warp往往有着更快的速度，但并非是全局的，需要进行配置才可使用他"
+echo "Warp往往有着更快的速度，但并非是全局的，需要进行配置才可使用"
 echo "个人建议先使用NAT64进行开局，安装所需要的脚本，再使用warp做为日常使用"
 echo "二者请只使用其中之一"
 echo "1. 使用NAT64服务"
