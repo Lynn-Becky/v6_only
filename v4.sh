@@ -6,9 +6,7 @@ GREEN='\033[0;32m'
 NC='\033[0m' 
 
 echo -e "${GREEN}一键在仅ipv6系统上添加ipv4出口脚本 github@lynn-becky${NC}"
-echo "NAT64是全局的，在执行github脚本时（如安装探针）可不添加proxychains选项，但速度可能较慢"
-echo "Warp往往有着更快的速度，但并非是全局的，需要进行配置才可使用"
-echo "个人建议先使用NAT64进行开局，安装所需要的脚本，再使用warp做为日常使用"
+echo "先使用NAT64安装warp，再关闭NAT64，将warp做为日常使用"
 echo "二者请只使用其中之一"
 echo "1. 使用NAT64服务"
 echo "2. 使用Warp服务"
@@ -27,18 +25,7 @@ case $choice in
     ;;
   2)
     echo -e "${YELLOW}你选择了Warp服务${NC}"
-    apt update && apt install -y curl gnupg lsb-release proxychains4
-    curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg |  gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/cloudflare-client.list
-    apt update && apt install -y cloudflare-warp
-    warp-cli register 
-    warp-cli set-mode proxy
-    warp-cli set-proxy-port 1835
-    warp-cli connect
-    warp-cli enable-always-on
-    apt install wget
-    curl -Ls https://raw.githubusercontent.com/Lynn-Becky/v6_only/main/proxychains4.conf -o proxychains4.conf
-    mv proxychains4.conf /etc/proxychains4.conf 
+    wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh 4
     echo -e "${GREEN}执行完毕${NC}"
     ;;
   3)
