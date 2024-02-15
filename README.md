@@ -11,7 +11,11 @@
 apt install -y curl && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/v6_only/main/v4.sh)
 ```
 目前在wap 1刀机上的debian11系统试验  
-
+*不建议使用  
+传统非全局模式，proxychain默认端口为1835
+```
+apt install -y curl && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/v6_only/main/v4old.sh)
+```
 特别感谢各位大佬的命令，本脚本仅将其做整合
 
 # 建议
