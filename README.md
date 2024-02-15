@@ -15,4 +15,4 @@ apt install -y curl && bash <(curl -Ls https://raw.githubusercontent.com/Lynn-Be
 特别感谢各位大佬的命令，本脚本仅将其做整合
 
 # 建议
-先使用Nat64方式，安装你想要的那个脚本，再切换到warp方式
+先使用Nat64方式，安装warp，再关闭NAT64后正常使用
