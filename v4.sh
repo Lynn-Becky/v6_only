@@ -7,9 +7,11 @@ NC='\033[0m'
 
 echo -e "${GREEN}一键在仅ipv6系统上添加ipv4出口脚本 github@lynn-becky${NC}"
 echo "先使用NAT64安装warp，再关闭NAT64，将warp做为日常使用"
+echo "warp模块引用了fscarmen的脚本，特别感谢"
+echo "如需使用传统非全局warp，请使用'v4old.sh'脚本"
 echo "二者请只使用其中之一"
 echo "1. 使用NAT64服务"
-echo "2. 使用Warp服务"
+echo "2. 使用Warp服务(全局)"
 echo "3. 不再使用NAT64服务"
 echo "4. 持久化NAT64"
 echo "5. 不再持久化NAT64"
